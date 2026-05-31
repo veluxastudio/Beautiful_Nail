@@ -181,7 +181,7 @@ export default function LoginPage() {
           </div>
 
           <p className="text-center text-xs text-gray-400 mt-6">
-            © {new Date().getFullYear()} Beauty Salon. All rights reserved.
+            © {new Date().getFullYear()} Beautiful Nail. All rights reserved.
           </p>
         </div>
       </div>
