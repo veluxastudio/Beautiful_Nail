@@ -14,9 +14,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Beautiful Nails Admin Dashboard",
-  description: "Manage your Beautiful Nails salon with ease. View appointments, customers, staff, and generate performance reports all in one place.",
+  description:
+    "Manage your Beautiful Nails salon with ease.",
   icons: {
-    icon: "logo/logonails.png",
+    icon: [
+      {
+        url: "/logo/logonails.png",
+        type: "image/png",
+      },
+    ],
   },
 };
 
