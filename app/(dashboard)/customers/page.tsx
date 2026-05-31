@@ -94,7 +94,7 @@ export default function CustomersPage() {
 
       {/* GRID */}
       {!loading && !error && (
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
           {filteredCustomers.map((customer) => (
             <CustomerCard key={customer.id} customer={customer} />
           ))}

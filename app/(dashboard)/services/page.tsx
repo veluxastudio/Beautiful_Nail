@@ -69,24 +69,24 @@ export default function ServicesPage() {
   return (
     <div className="space-y-6">
       {/* HEADER */}
-      <div className="flex items-start justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h1 className="text-4xl font-bold">Services</h1>
-          <p className="text-gray-500 mt-2">
+          <h1 className="text-3xl sm:text-4xl font-bold">Services</h1>
+          <p className="text-gray-500 mt-2 text-sm">
             Available services: Manicure, Pedicure, Nail Art, Nail Gels, Extension
           </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={() => setShowAddService((prev) => !prev)}
-            className="bg-[#ff2056] hover:bg-[#d9003f] text-white rounded-xl px-5 py-3 font-medium transition-all flex items-center gap-2"
+            className="bg-[#ff2056] hover:bg-[#d9003f] text-white rounded-xl px-5 py-3 font-medium transition-all flex items-center gap-2 whitespace-nowrap"
           >
             + Add Nail Service
           </button>
           {showAddService && (
             <button
               onClick={() => setShowAddService(false)}
-              className="bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl px-5 py-3 font-medium transition-all"
+              className="bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl px-5 py-3 font-medium transition-all whitespace-nowrap"
             >
               Cancel
             </button>
@@ -161,7 +161,7 @@ export default function ServicesPage() {
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
         {filteredServices.map((service) => (
           <ServiceCard
             key={service.id}

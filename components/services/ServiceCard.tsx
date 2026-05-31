@@ -88,7 +88,7 @@ export default function ServiceCard({ service, onRefresh }: Props) {
     <>
       <div className="bg-white rounded-2xl border border-gray-200 p-5 flex flex-col gap-3 transition-all hover:shadow-lg hover:border-gray-300 hover:-translate-y-0.5">
         {/* TOP */}
-        <div className="flex justify-between items-start">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div className="w-11 h-11 rounded-xl bg-[#ff2056]/10 flex items-center justify-center">
             <ScissorsIcon />
           </div>
@@ -136,7 +136,7 @@ export default function ServiceCard({ service, onRefresh }: Props) {
         </div>
 
         {/* ACTIONS */}
-        <div className="flex gap-2 pt-1">
+        <div className="flex flex-col gap-2 pt-1 sm:flex-row">
           <button
             onClick={() => setShowEdit(true)}
             className="flex-1 flex items-center justify-center gap-2 border border-gray-200 rounded-xl py-2.5 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-all"

@@ -1,17 +1,29 @@
 interface Props {
-  customer: any;
+  customer: {
+    id?: string;
+    full_name?: string;
+    member_type?: string;
+    email?: string;
+    phone?: string;
+    last_visit?: string;
+    favorite_service?: string;
+    total_visits?: number;
+    total_spent?: number;
+  };
 }
 
-function getInitials(name: string) {
+function getInitials(name?: string) {
+  if (!name) return "-";
+
   return name
-    ?.split(" ")
+    .split(" ")
     .slice(0, 2)
     .map((n: string) => n[0])
     .join("")
     .toUpperCase();
 }
 
-function formatDate(dateStr: string) {
+function formatDate(dateStr?: string) {
   if (!dateStr) return "-";
   return new Date(dateStr).toLocaleDateString("en-GB", {
     day: "numeric",
@@ -66,7 +78,7 @@ export default function CustomerCard({ customer }: Props) {
       </div>
 
       {/* STATS */}
-      <div className="border-t border-gray-200 px-5 py-4 flex gap-6">
+      <div className="border-t border-gray-200 px-5 py-4 flex flex-col gap-4 sm:flex-row">
         <div>
           <p className="text-2xl font-bold">{customer.total_visits ?? 0}</p>
           <p className="text-xs text-gray-400 mt-0.5">Total Visits</p>

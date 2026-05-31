@@ -91,7 +91,7 @@ export default function StaffCard({ staff, onRefresh, onEdit }: Props) {
       </div>
 
       {/* STATS */}
-      <div className="border-t border-gray-200 px-5 py-4 flex gap-6">
+      <div className="border-t border-gray-200 px-5 py-4 flex flex-col gap-4 sm:flex-row">
         <div>
           <p className="text-2xl font-bold">{staff.services_done ?? 0}</p>
           <p className="text-xs text-gray-400 mt-0.5">Services Done</p>
@@ -106,7 +106,7 @@ export default function StaffCard({ staff, onRefresh, onEdit }: Props) {
       </div>
 
       {/* ACTIONS */}
-      <div className="border-t border-gray-200 px-5 py-3 flex gap-2">
+      <div className="border-t border-gray-200 px-5 py-3 flex flex-col gap-2 sm:flex-row">
         <button
           onClick={onEdit}
           className="flex-1 flex items-center justify-center gap-2 border border-gray-200 rounded-xl py-2.5 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-all"

@@ -23,7 +23,12 @@ const menus = [
   { name: "Reports",      href: "/reports",      icon: FileBarChart },
 ];
 
-export default function Sidebar() {
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+export default function Sidebar({ isOpen = false, onClose }: SidebarProps) {
   const pathname = usePathname();
   const router   = useRouter();
 
@@ -33,21 +38,28 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="w-64 border-r border-gray-200 bg-white h-screen sticky top-0 p-6
-                      flex flex-col overflow-y-auto">
-      {/* LOGO */}
-      <div className="mb-10 flex items-center gap-3">
-        <Image
-          src="/logo/logonails.png"
-          alt="Beauty Salon Logo"
-          width={40}
-          height={40}
-          className="rounded-xl object-contain"
-        />
-        <div>
-          <p className="text-base font-bold leading-tight">Beauty Salon</p>
-          <p className="text-xs text-gray-400">Admin Panel</p>
+    <aside className={`fixed inset-y-0 left-0 z-50 w-64 transform bg-white border-r border-gray-200 p-4 flex flex-col overflow-y-auto transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} md:static md:translate-x-0 md:h-screen md:flex`}>
+      <div className="mb-6 flex items-center justify-between gap-3 md:justify-start">
+        <div className="flex items-center gap-3">
+          <Image
+            src="/logo/logonails.png"
+            alt="Beauty Salon Logo"
+            width={40}
+            height={40}
+            className="rounded-xl object-contain"
+          />
+          <div>
+            <p className="text-[18px] font-bold leading-tight">Beauty Salon</p>
+            <p className="text-[12px] text-gray-400">Admin Panel</p>
+          </div>
         </div>
+        <button
+          type="button"
+          onClick={() => onClose?.()}
+          className="md:hidden rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 transition"
+        >
+          ✕
+        </button>
       </div>
 
       {/* NAV */}

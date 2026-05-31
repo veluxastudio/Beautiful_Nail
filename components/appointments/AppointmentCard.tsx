@@ -82,7 +82,7 @@ export default function AppointmentCard({
         </div>
 
         {/* ROW 4 — tombol aksi */}
-        <div className="flex gap-2 pt-1">
+        <div className="flex flex-col gap-2 pt-1 sm:flex-row sm:flex-wrap">
           <button
             onClick={() => setShowModal(true)}
             className="flex items-center gap-1.5 border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-medium hover:bg-gray-50 transition-all"
