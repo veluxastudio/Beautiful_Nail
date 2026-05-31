@@ -5,7 +5,7 @@ import StaffCard from "@/components/staff/StaffCard";
 import { createStaff, getStaff, updateStaff } from "@/services/staff.service";
 
 type Staff = {
-  id?: string;
+  id: string;
   full_name: string;
   email: string;
   phone: string;
