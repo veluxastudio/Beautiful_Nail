@@ -43,13 +43,13 @@ export default function Sidebar({ isOpen = false, onClose }: SidebarProps) {
         <div className="flex items-center gap-3">
           <Image
             src="/logo/logonails.png"
-            alt="Beauty Salon Logo"
+            alt="Nyonya Kukuy Salon Logo"
             width={40}
             height={40}
             className="rounded-xl object-contain"
           />
           <div>
-            <p className="text-[18px] font-bold leading-tight">Beauty Salon</p>
+            <p className="text-[18px] font-bold leading-tight">Nyonya Kuku</p>
             <p className="text-[12px] text-gray-400">Admin Panel</p>
           </div>
         </div>

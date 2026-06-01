@@ -47,7 +47,7 @@ export default function LoginPage() {
             />
           </div>
           <div>
-            <h1 className="text-4xl font-bold">Beautiful Nail</h1>
+            <h1 className="text-4xl font-bold">Nyonya Kuku</h1>
             <p className="text-rose-100 mt-2 text-lg">Admin Panel</p>
           </div>
           <p className="text-rose-100 text-sm leading-relaxed">
@@ -78,7 +78,7 @@ export default function LoginPage() {
               <Image src="/logo/logonails.png" alt="Logo" width={28} height={28} className="object-contain" />
             </div>
             <div>
-              <p className="font-bold text-base leading-tight">Beautiful Nail</p>
+              <p className="font-bold text-base leading-tight">Nyonya Kuku</p>
               <p className="text-xs text-gray-400">Admin Panel</p>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function LoginPage() {
           </div>
 
           <p className="text-center text-xs text-gray-400 mt-6">
-            © {new Date().getFullYear()} Beautiful Nail. All rights reserved.
+            © {new Date().getFullYear()} Nyonya Kuku. All rights reserved.
           </p>
         </div>
       </div>
