@@ -21,7 +21,7 @@ export default function DashboardLayout({
         />
       )}
 
-      <div className="flex-1">
+      <div className="flex-1 md:ml-64">
         <div className="sticky top-0 z-50 flex items-center justify-between border-b border-gray-200 bg-[#f5f7fb] px-4 py-3 md:hidden">
           <button
             type="button"

@@ -38,7 +38,7 @@ export default function Sidebar({ isOpen = false, onClose }: SidebarProps) {
   }
 
   return (
-    <aside className={`fixed inset-y-0 left-0 z-50 w-64 transform bg-white border-r border-gray-200 p-4 flex flex-col overflow-y-auto transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} md:static md:translate-x-0 md:h-screen md:flex`}>
+    <aside className={`fixed inset-y-0 left-0 z-50 w-64 transform bg-white border-r border-gray-200 p-4 flex flex-col overflow-y-auto transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} md:fixed md:translate-x-0 md:h-screen md:flex`}>
       <div className="mb-6 flex items-center justify-between gap-3 md:justify-start">
         <div className="flex items-center gap-3">
           <Image
